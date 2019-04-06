@@ -17,14 +17,14 @@ const db = knex({
   }
 });
 
-db.select('*').from('users').then(data => {
+// db.select('*').from('users').then(data => {
 
-});
+// });
 
 const app = express();
 
-app.use(bodyParser.json());
 app.use(cors());
+app.use(bodyParser.json());
 
 
 app.get('/', (req, res)=> {
